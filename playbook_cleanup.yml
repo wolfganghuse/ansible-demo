@@ -1,0 +1,27 @@
+#runme: ansible-playbook playbook_cleanup.yml
+---
+- name: Run playbook tests
+  gather_facts: false
+  hosts: localhost
+  vars:
+    vm_to_delete:
+      - ansible_vm_01
+      - ansible_vm_loop_01
+      - ansible_vm_loop_02
+      - ansible_vm_loop_03
+      - ansible_vm_loop_04
+      - ansible_vm_loop_05
+  vars_files:
+    - 'nutanix-pe-lab.yml'
+  tasks:
+    - name: Cleanup VMs
+      grdavies.nutanix.prism_vm:
+        prism: '{{ prism_ip }}'
+        username: '{{ prism_username }}'
+        password: '{{ prism_password }}'
+        validate_certs: '{{ prism_validate_certs }}'
+        state: 'absent'
+        name: "{{ item }}"
+      check_mode: no
+      delegate_to: localhost
+      loop: "{{ vm_to_delete }}"

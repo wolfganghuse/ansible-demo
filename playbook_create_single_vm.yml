@@ -1,0 +1,26 @@
+#runme: ansible-playbook playbook_create_single_vm.yml
+---
+- name: Run playbook tests
+  gather_facts: false
+  hosts: localhost
+  vars_files:
+    - 'nutanix-pe-lab.yml'
+  tasks:
+    - name: Create vm "ansible_vm_01"
+      grdavies.nutanix.prism_vm:
+        prism: '{{ prism_ip }}'
+        username: '{{ prism_username }}'
+        password: '{{ prism_password }}'
+        validate_certs: '{{ prism_validate_certs }}'
+        state: 'on'
+        name: 'ansible_vm_01'
+        cores: 2
+        memory_gb: 2
+        cdrom: True
+        disks:
+          - image_name: 'ansible-centos-8'
+            size_gb: 80
+        nics:
+          - network_name: 'primary'
+      check_mode: no
+      delegate_to: localhost

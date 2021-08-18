@@ -1,0 +1,29 @@
+# runme graph: ansible-inventory -i nutanix.yml --graph --vault-password-file vault_password_file
+# runme list: ansible-inventory -i nutanix.yml --list --vault-password-file vault_password_file
+
+plugin: grdavies.nutanix.prism_inventory
+connections:
+- ip_address: '10.38.182.37'
+  password: 'nx2Tech582!'
+  include_vms: 'yes'
+  validate_certs: 'no'
+- ip_address: '10.38.182.37'
+  password: 'nx2Tech582!'
+  include_vms: 'yes'
+  validate_certs: 'no'
+- ip_address: '10.38.182.37'
+  password: 'nx2Tech582!'
+  include_vms: 'yes'
+  validate_certs: 'no'
+- ip_address: '10.38.182.37'
+  password: 'nx2Tech582!'
+  include_vms: 'yes'
+  validate_certs: 'no'
+- ip_address: '10.38.182.37'
+  password: 'nx2Tech582!'
+  include_vms: 'yes'
+  validate_certs: 'no'
+- ip_address: '10.38.182.37'
+  password: 'nx2Tech582!'
+  include_vms: 'yes'
+  validate_certs: 'no'
