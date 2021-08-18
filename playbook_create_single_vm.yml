@@ -18,9 +18,9 @@
         memory_gb: 2
         cdrom: True
         disks:
-          - image_name: 'ansible-centos-8'
+          - image_name: 'Centos84'
             size_gb: 80
         nics:
-          - network_name: 'primary'
+          - network_name: 'NTNX-DEMO01_IPAM'
       check_mode: no
       delegate_to: localhost
