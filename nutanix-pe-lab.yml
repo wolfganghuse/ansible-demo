@@ -1,4 +1,4 @@
-prism_ip: '10.38.182.37'
+prism_ip: '172.23.1.115'
 prism_username: 'admin'
-prism_password: 'nx2Tech582!'
+prism_password: 'Nutanix.123'
 prism_validate_certs: 'no'
