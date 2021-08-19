@@ -1,0 +1,7 @@
+# ansible-playbook -i plaintext-nutanix.yaml retrieve_host_vars —limit "ansiblerole_webservers"
+- name: Retrieve host vars
+  hosts:
+    - all
+  tasks:
+    - debug:
+        var=hostvars[inventory_hostname]
