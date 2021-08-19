@@ -1,5 +1,5 @@
-# runme graph: ansible-inventory -i nutanix.yml --graph --vault-password-file vault_password_file
-# runme list: ansible-inventory -i nutanix.yml --list --vault-password-file vault_password_file
+# runme graph: ansible-inventory -i plaintext-nutanix.yml --graph
+# runme list: ansible-inventory -i plaintext-nutanix.yml --list
 
 plugin: grdavies.nutanix.prism_inventory
 connections:
