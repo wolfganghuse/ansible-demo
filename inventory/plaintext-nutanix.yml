@@ -3,8 +3,8 @@
 
 plugin: grdavies.nutanix.prism_inventory
 connections:
-- ip_address: '172.23.1.115'
-  password: 'Nutanix.123'
+- ip_address: '172.23.0.7'
+  password: 'nx2Tech100!'
   include_vms: 'yes'
   validate_certs: 'no'
 
